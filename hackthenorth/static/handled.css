@@ -1,0 +1,64 @@
+body{
+    background-color: #C2C8CE; 
+    color: #00617c; 
+    font-family: 'Open Sans', sans-serif;
+}
+
+.sub-title{
+    text-align: center;
+    margin-bottom: -50px;
+    color: white;
+    margin-top: -10px;
+}
+
+#wrapper{
+    margin-top: 70px;   
+}
+
+
+section{
+    margin-top: -70px;
+    margin-left: -5%;
+    margin-right: -5%;
+    border-radius: 10px;
+}
+
+h2{
+    margin-left: 10%;
+}
+
+.big{
+    font-size: 25px;
+    font-weight: 700;
+}
+
+#shift{
+    margin-left: 10%;
+}
+
+#main{
+    padding: 80px;
+}
+
+#jqmeter-container{
+    margin-top: -660px;
+    float: right;
+    margin-right: 20%;
+}
+
+#jqmeter-container2{
+    margin-top: -660px;
+    float: right;
+    margin-right: 10%;
+}
+
+.gender{
+    float: right;
+    margin-top: -255px;
+    margin-right: -90px;
+    padding: 80px;
+}
+
+.female{
+    margin-right: -110px;
+}

@@ -1,0 +1,143 @@
+body{
+    background-color: #C2C8CE; 
+    color: #00617c; 
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+}
+
+
+#wrapper{
+    margin-top: 70px;   
+}
+
+.sub-title{
+    margin-left: 20%;
+    margin-right: 20%;
+    color: white;
+    font-size: 20px;
+    margin-bottom: -50px;
+    font-style: italic;
+    margin-top: -20px;
+}
+
+#compute{
+    margin-right: 20%;
+    margin-left: 20%;
+}
+
+#main{
+    padding: 80px;
+}
+
+form{
+    text-align: center;
+    margin-left: 10%;
+    margin-right: -100%;
+}
+
+input[type="submit"]{
+    padding: 10px;
+    margin-top: 20px;
+    background-color: #2E86D3;
+    color: white;
+    border: 1px #26C1E5;
+    border-radius: 5px;
+}
+
+#content{
+    color: white;
+    margin-left: 20%;
+    margin-right: 20%;
+    padding: 40px;
+    font-size: 30px;
+}
+
+a{
+    text-decoration: none;
+    color: #2E86D3;
+}
+
+.triangle{
+    height:50px;
+    width: 50px;
+    margin-top: -1px;
+}
+
+html, body {
+  height:100%; /* allows us to size the header height based as a percent */
+}
+
+.header {
+  height:calc(100% - 3em); /* subtract an amount of space for your arrow element */
+  background-color:#333;
+  width:100%;
+}
+
+.main {
+  width:100%;
+  position:relative;
+  background-color:#fff;
+    text-align: center;
+}
+
+/* the wrapper element that will become the outer circle */
+.arrow-wrap {
+  position:absolute;
+  z-index:1;
+  left:50%;
+  top:-5em;
+  margin-left:-5em;
+  background:#111;
+  width:10em;
+  height:10em;
+  padding:4em 2em;
+  border-radius:50%;
+  font-size:0.5em;
+  display:block;
+  box-shadow:0px 0px 5px 0px #333;
+}
+
+/* a triangle to make the main part of the arrow. Adjust the border-color to fit your needs */
+.arrow {
+  float:left;
+  position:relative;
+  width: 0px;
+  height: 0px;
+  border-style: solid;
+  border-width: 3em 3em 0 3em;
+  border-color: #ffffff transparent transparent transparent;
+  -webkit-transform:rotate(360deg);/* added for better anti-aliasing on webkit browsers */
+}
+
+/* a pseudo element arrow placed on top of the other one with the same color as the wrapper */
+.arrow:after {
+  content:'';
+  position:absolute;
+  top:-3.2em;
+  left:-3em;
+  width: 0px;
+  height: 0px;
+  border-style: solid;
+  border-width: 3em 3em 0 3em;
+  border-color: #111 transparent transparent transparent;
+  -webkit-transform:rotate(360deg);/* added for better anti-aliasing on webkit browsers */
+}
+
+@-webkit-keyframes arrows {
+    0% { top:0; }
+    10% { top:12%; }
+    20% { top:0; }
+    30% { top:12%; }
+    40% { top:-12%; }
+    50% { top:12%; }
+    60% { top:0; }
+    70% { top:12%; }
+    80% { top:-12%; }
+    90% { top:12%; }
+    100% { top:0; }
+  }
+  
+  .arrow-wrap .arrow {
+    -webkit-animation: arrows 2.8s 0.4s;
+    -webkit-animation-delay: 3s;
+  }

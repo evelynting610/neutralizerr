@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Neutralizer</title>
+        
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+        <!-- Latest compiled JavaScript -->
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+        
+        <!-- title and meta -->
+      <meta charset="utf-8">
+      <meta content="width=device-width,initial-scale=1.0" name="viewport">
+
+      <!-- css -->
+      <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,700italic,400,600,700' rel='stylesheet' type='text/css'>
+      <link href="../static/base.css" rel="stylesheet">
+      <link href="../static/style.css" rel="stylesheet">
+      
+     <!-- Custom CSS-->
+      <link rel="stylesheet" href="../static/index.css">
+        
+    <!-- Favicon-->    
+    <link rel='shortcut icon' type='image/x-icon' href='../static/favicon.ico'/>
+        
+    </head>
+    
+    <body>
+        <center><img src="../static/logo.jpg"></center>
+        
+        <p class="sub-title">Is your job description sending the wrong signal? What changes could make it more appealing to whichever gender is underrepresented in your field?<font color="#2E86D3"><br>Paste it into the box below and find out.</fon></p>
+        
+        <div id="wrapper">
+
+          <div id="main">
+            <div class="container">
+
+             <section id="compute">
+                <h2>Measure Your Text's Gender Bias</h2>
+                <ul id="shift" class="input-list style-2 clearfix">
+                  <li>
+                    <form action="/handled" method="post">
+                        <input type="text" placeholder="Insert Text Here" name="jobInput">
+                        <input type="submit" value="Run Gender Analysis">
+                    </form>
+                  </li>
+                </ul>
+              </section>
+            
+
+            </div>
+          </div>
+
+        </div>
+        
+<!--        <a href="#"><img class="triangle" src="../static/triangle.png"></a>-->
+        <center>
+            <section class="main">
+              <a class="arrow-wrap" href="#content">
+                <span class="arrow"></span>
+              </a>
+            </section>
+        </center>
+        <div id="content">
+            <p><a href="http://www.fortefoundation.org/site/DocServer/gendered_wording_JPSP.pdf?docID=16121">A 2011 study</a> 
+                published in the American Psychological Association indicated that the use of 
+                gender-biased keywords in job descriptions directly correlates with the number of women who apply. 
+                According to the study, women are far less likely to demonstrate interest in positions whose descriptions 
+                include “male-gendered” words like “decisive,” “challenging,” and “dominate.” When a description includes 
+                words like “trust," “connect,” or “responsible,” women are more likely to “see themselves” in the position 
+                and apply.</p>
+        </div>
+
+    <script>
+        
+        $(function() {
+  $('a[href*=#]:not([href=#])').click(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+      if (target.length) {
+        $('html,body').animate({
+          scrollTop: target.offset().top
+        }, 1000);
+        return false;
+      }
+    }
+  });
+});    
+    </script>
+        
+        
+        
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="../static/jqmeter.min.js"></script>
+    </body>
+</html>

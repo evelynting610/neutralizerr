@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Neutralizer</title>
+        
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+        <!-- Latest compiled JavaScript -->
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+        
+        <!-- title and meta -->
+      <meta charset="utf-8">
+      <meta content="width=device-width,initial-scale=1.0" name="viewport">
+
+      <!-- css -->
+      <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,700italic,400,600,700' rel='stylesheet' type='text/css'>
+      <link href="../static/base.css" rel="stylesheet">
+      <link href="../static/style.css" rel="stylesheet">
+      
+     <!-- Custom CSS-->
+      <link rel="stylesheet" href="../static/handled.css">
+        
+    <!-- Favicon-->    
+    <link rel='shortcut icon' type='image/x-icon' href='../static/favicon.ico'/>
+        
+    </head>
+    
+    <body>
+        <center><img src="../static/logo.jpg"></center>
+        
+        <h3 class="sub-title"><i>Gender-o-Meter for the Web</i></h3>
+        
+        <div id="wrapper">
+
+          <div id="main">
+            <div class="container">
+
+             <section>
+                <ul id="shift" class="input-list style-2 clearfix">
+                  <li>
+                    <p class="big">Bias analysis</p>
+                    <p>Bias towards men: {{ male_score }}%</p>
+                    <p>Bias towards women: {{ fem_score }}%</p>
+                    <br>
+                    <div id="original text">
+                        <p class="big">Original text:</p>
+
+                        <p>{{job_description}}</p>
+                        <br>
+                        <p class="big">Suggested text to bias towards women:</p>
+                        <p>{{ new_female_text }}</p>
+
+                        <p>Bias analysis of suggested text:</p>
+                        <p>Bias towards men: {{ new_male_score }}%</p>
+                        <p>Bias towards women: {{ new_fem_score }}%</p>
+                        <br>
+                        <p class="big">Suggested text to bias towards men:</p>
+                        <p>{{ new_male_text }}</p>
+
+                        <p>Bias analysis of suggested text:</p>
+                        <p>Bias towards men: {{ new_male_score2 }}%</p>
+                        <p>Bias towards women: {{ new_fem_score2 }}%</p>
+                    </div>
+                  </li>
+                </ul>
+              </section>
+                
+            <img class="gender" src="../static/male.png">
+            <img class="gender female" src="../static/female.png">
+            
+                
+                <script type=text/javascript>
+
+                $(document).ready(function(){
+                    var male_score = {{male_score}};
+                    var female_score = {{fem_score}};
+
+                    $('#jqmeter-container').jQMeter({
+                        goal:'100',
+                        raised: male_score.toString(),
+                        meterOrientation:'vertical',
+                        width:'70px',
+                        height:'350px'
+                    });
+
+                    $('#jqmeter-container2').jQMeter({
+                        goal:'100',
+                        raised:female_score.toString(),
+                        meterOrientation:'vertical',
+                        width:'70px',
+                        height:'350px',
+                        barColor: '#177DAD'
+                    });
+                });
+                
+                </script>
+            </div>
+          </div>
+
+        </div>
+        
+                    
+        
+    <div id="jqmeter-container"></div>
+    <div id="jqmeter-container2"></div>
+        
+       
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+         <script src="../static/jqmeter.min.js"></script>
+    </body>
+</html>
